@@ -5,8 +5,14 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 ## Requirements
 
+- Git
+
+```sh
+brew install ripgrep
+```
+
 - Search
 
-```
+```sh
 brew install ripgrep
 ```
