@@ -13,7 +13,7 @@ return {
     },
     setup = {
       eslint = function()
-        require("lazyvim.util").on_attach(function(client)
+        require("lazyvim.util").lsp.on_attach(function(client)
           if client.name == "eslint" then
             client.server_capabilities.documentFormattingProvider = true
           elseif client.name == "tsserver" then
@@ -22,7 +22,7 @@ return {
         end)
         vim.api.nvim_create_autocmd("BufWritePre", {
           callback = function(event)
-            if not require("lazyvim.plugins.lsp.format").enabled() then
+            if not require("lazyvim.util").format.enabled() then
               -- exit early if autoformat is not enabled
               return
             end

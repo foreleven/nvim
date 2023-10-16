@@ -13,5 +13,5 @@ vim.keymap.set("i", "<C-j>", "<Down>", { silent = true })
 --
 
 vim.keymap.set("n", "<c-/>", function()
-  Util.float_term()
+  Util.terminal.open()
 end, { desc = "Terminal (cwd)" })
